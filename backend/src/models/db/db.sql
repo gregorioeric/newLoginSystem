@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS system_login;
+DROP DATABASE IF EXISTS login_system;
 
-CREATE DATABASE system_login;
+CREATE DATABASE login_system;
 
-USE system_login;
+USE login_system;
 
 CREATE TABLE users(
 user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
