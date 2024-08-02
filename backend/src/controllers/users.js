@@ -1,4 +1,11 @@
-const { findAllUsers, findById, createUser } = require("../services/users");
+const {
+  findAllUsers,
+  findById,
+  createUser,
+  updateUser,
+  deleteUser,
+  postEmail,
+} = require("../services/users");
 
 const getAllUsers = async (req, res) => {
   const results = await findAllUsers();
@@ -14,13 +21,9 @@ const getById = async (req, res) => {
 };
 
 const postUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const user = req.body;
 
-  if (!name || !email || !password) {
-    return res.json({ message: "Os campos não podem ser vazio!" });
-  }
-
-  const result = await createUser(name, email, password);
+  const result = await createUser(user);
 
   if (result) {
     res.json({ message: "Criado com sucesso!" });
@@ -29,8 +32,39 @@ const postUser = async (req, res) => {
   }
 };
 
+const putUser = async (req, res) => {
+  const { id } = req.params;
+  const user = req.body;
+  const result = await updateUser(id, user);
+  if (!result) {
+    return res.json({ message: "Usuario não encontrado" });
+  }
+  return res.json({ message: "Atualizado com Sucesso!" });
+};
+
+const removeUser = async (req, res) => {
+  const { id } = req.params;
+  const result = await deleteUser(id);
+  if (!result) {
+    return res.json({ message: "Usuario não encontrado" });
+  }
+  return res.json({ message: "Deletado com Sucesso!" });
+};
+
+const loginUser = async (req, res) => {
+  const { user_email } = req.body;
+  const token = req.headers;
+
+  const result = await postEmail(user_email);
+
+  return res.json(result);
+};
+
 module.exports = {
   getAllUsers,
   getById,
   postUser,
+  putUser,
+  removeUser,
+  loginUser,
 };
