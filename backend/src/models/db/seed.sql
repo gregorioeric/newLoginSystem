@@ -39,3 +39,22 @@ VALUES
 ('Rua dos Alecrins', 789, NULL, 'Vila das Hortênsias', 'São Paulo - SP', '01435-678'),
 ('Rua do Limoeiro', 234, 'Casa 2', 'Jardim das Palmeiras', 'Campinas - SP', '13012-345'),
 ('Avenida Brigadeiro Faria Lima', 1234, 'Conjunto 101', 'Itaim Bibi', 'São Paulo - SP', '04538-000');
+
+
+-- Inserir dados de exemplo na tabela venda
+INSERT INTO `pizzaria`.`venda` (
+    venda_user_id,
+    venda_produto_id,
+    venda_endereco_id,
+    venda_num_pedido,
+    venda_quantidade,
+    venda_valor_total,
+    venda_pagamento,
+    venda_data
+)
+VALUES
+    (1, 1, 1, 1001, 2, 59.90, 'Cartão de Crédito', NOW()),
+    (2, 3, 2, 1002, 1, 29.90, 'Dinheiro', NOW()),
+    (1, 2, 3, 1003, 3, 89.70, 'Pix', NOW()),
+    (3, 4, 4, 1004, 5, 149.50, 'Boleto', NOW()),
+    (2, 5, 5, 1005, 4, 119.80, 'Cartão de Débito', NOW());

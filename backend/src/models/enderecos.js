@@ -42,7 +42,7 @@ const updateEnderecoById = async (id, endereco) => {
     end_cep,
   } = endereco;
   const [result] = await connection.execute(
-    "UPDATE endereco SET end_rua = ?, end_numero = ?, end_complemento = ?, end_bairro = ?, end_cidade_uf = ?, end_cep = ? WHERE ende_id = ?;",
+    "UPDATE endereco SET end_rua = ?, end_numero = ?, end_complemento = ?, end_bairro = ?, end_cidade_uf = ?, end_cep = ? WHERE end_id = ?;",
     [
       end_rua,
       end_numero,

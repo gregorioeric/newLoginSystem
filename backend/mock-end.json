@@ -1,0 +1,42 @@
+[
+  {
+    "end_rua": "Rua das Acácias",
+    "end_numero": 456,
+    "end_complemento": "Apto 101",
+    "end_bairro": "Jardim das Flores",
+    "end_cidade_uf": "São Paulo - SP",
+    "end_cep": "01234-567"
+  },
+  {
+    "end_rua": "Avenida Paulista",
+    "end_numero": 1000,
+    "end_complemento": "Sala 502",
+    "end_bairro": "Centro",
+    "end_cidade_uf": "São Paulo - SP",
+    "end_cep": "01310-100"
+  },
+  {
+    "end_rua": "Rua dos Alecrins",
+    "end_numero": 789,
+    "end_complemento": null,
+    "end_bairro": "Vila das Hortênsias",
+    "end_cidade_uf": "São Paulo - SP",
+    "end_cep": "01435-678"
+  },
+  {
+    "end_rua": "Rua do Limoeiro",
+    "end_numero": 234,
+    "end_complemento": "Casa 2",
+    "end_bairro": "Jardim das Palmeiras",
+    "end_cidade_uf": "Campinas - SP",
+    "end_cep": "13012-345"
+  },
+  {
+    "end_rua": "Avenida Brigadeiro Faria Lima",
+    "end_numero": 1234,
+    "end_complemento": "Conjunto 101",
+    "end_bairro": "Itaim Bibi",
+    "end_cidade_uf": "São Paulo - SP",
+    "end_cep": "04538-000"
+  }
+]
