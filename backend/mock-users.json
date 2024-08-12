@@ -1,0 +1,40 @@
+[
+  {
+    "user_id": 1,
+    "user_name": "João Silva",
+    "user_email": "joao.silva@example.com",
+    "user_password": "FR$56&uj",
+    "user_phone": "+55 11 98765-4321"
+  },
+  {
+    "user_id": 2,
+    "user_name": "Maria Oliveira",
+    "user_email": "maria.oliveira@example.com",
+    "user_password": "FR$56&uj",
+    "user_phone": "+55 21 91234-5678"
+  },
+  {
+    "user_id": 3,
+    "user_name": "Carlos Pereira",
+    "user_email": "carlos.pereira@example.com",
+    "user_password": "FR$56&uj",
+    "user_date": "2024-08-03T11:45:00",
+    "user_phone": "+55 31 99876-5432"
+  },
+  {
+    "user_id": 4,
+    "user_name": "Ana Costa",
+    "user_email": "ana.costa@example.com",
+    "user_password": "FR$56&uj",
+    "user_date": "2024-07-30T16:20:00",
+    "user_phone": "+55 41 98765-4321"
+  },
+  {
+    "user_id": 5,
+    "user_name": "Pedro Santos",
+    "user_email": "pedro.santos@example.com",
+    "user_password": "FR$56&uj",
+    "user_date": "2024-08-05T13:00:00",
+    "user_phone": "+55 51 92345-6789"
+  }
+]

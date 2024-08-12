@@ -45,6 +45,8 @@ const putUser = async (req, res) => {
 const removeUser = async (req, res) => {
   const { id } = req.params;
   const result = await deleteUser(id);
+  console.log(result);
+
   if (!result) {
     return res.json({ message: "Usuario não encontrado" });
   }

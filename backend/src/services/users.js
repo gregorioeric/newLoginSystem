@@ -1,5 +1,5 @@
 const {
-  allUsers,
+  selectAllUsers,
   userById,
   insertUser,
   updateUserById,
@@ -8,7 +8,7 @@ const {
 } = require("../models/users");
 
 const findAllUsers = async () => {
-  const results = await allUsers();
+  const results = await selectAllUsers();
   const data = {
     total: results.length,
     results: results,
@@ -18,7 +18,7 @@ const findAllUsers = async () => {
 
 const findById = async (id) => {
   const [result] = await userById(id);
-  console.log(result);
+
   if (!result) {
     return false;
   }
@@ -28,8 +28,8 @@ const findById = async (id) => {
 
 const createUser = async (user) => {
   const { user_email } = user;
-  const users = await findAllUsers();
-  const findUser = users.results.find((e) => e.email_user === user_email);
+  const userEmail = await findAllUsers();
+  const findUser = userEmail.results.find((e) => e.user_email === user_email);
 
   if (findUser) {
     return false;
@@ -41,9 +41,9 @@ const createUser = async (user) => {
 
 const updateUser = async (id, user) => {
   const findUser = await findById(id);
+
   if (findUser) {
     const result = await updateUserById(id, user);
-    console.log(result);
     return result;
   }
 
@@ -52,9 +52,9 @@ const updateUser = async (id, user) => {
 
 const deleteUser = async (id) => {
   const findUser = await findById(id);
+
   if (findUser) {
     const result = await deleteUserById(id);
-    console.log(result);
     return result;
   }
 

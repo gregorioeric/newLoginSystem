@@ -1,9 +1,7 @@
 const connection = require("./connect");
 const jwt = require("jsonwebtoken");
 
-const secretKey = "123";
-
-const allUsers = async () => {
+const selectAllUsers = async () => {
   const [results] = await connection.query("SELECT * FROM users");
   return results;
 };
@@ -53,9 +51,12 @@ const selectUser = async (user_email) => {
     return false;
   }
 
-  const userId = result.id;
+  const userId = result.user_id;
+
   // Cria um token JWT
-  const token = jwt.sign({ userId }, secretKey, { expiresIn: "1h" });
+  const token = jwt.sign({ userId }, process.env.SECRETJWT, {
+    expiresIn: "1h",
+  });
 
   console.log("token", token);
 
@@ -63,7 +64,7 @@ const selectUser = async (user_email) => {
 };
 
 module.exports = {
-  allUsers,
+  selectAllUsers,
   userById,
   insertUser,
   updateUserById,

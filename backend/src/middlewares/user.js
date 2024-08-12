@@ -15,7 +15,7 @@ const fields = (req, res, next) => {
     });
   }
 
-  if (user_password.length <= 8) {
+  if (user_password.length < 8) {
     return res.json({
       message: "A senha tem que ter no minimo 8 caracteres",
     });
