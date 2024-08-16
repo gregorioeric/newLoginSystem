@@ -1,6 +1,6 @@
 const {
   findAllUsers,
-  findById,
+  findUserById,
   createUser,
   updateUser,
   deleteUser,
@@ -15,7 +15,7 @@ const getAllUsers = async (req, res) => {
 
 const getById = async (req, res) => {
   const { id } = req.params;
-  const result = await findById(id);
+  const result = await findUserById(id);
 
   res.json(result);
 };

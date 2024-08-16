@@ -6,7 +6,7 @@ const selectAllUsers = async () => {
   return results;
 };
 
-const userById = async (id) => {
+const selectUserById = async (id) => {
   const [result] = await connection.execute(
     "SELECT * FROM users WHERE user_id = ?",
     [id]
@@ -65,7 +65,7 @@ const selectUser = async (user_email) => {
 
 module.exports = {
   selectAllUsers,
-  userById,
+  selectUserById,
   insertUser,
   updateUserById,
   deleteUserById,

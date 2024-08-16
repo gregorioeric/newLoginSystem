@@ -1,6 +1,6 @@
 const {
   selectAllUsers,
-  userById,
+  selectUserById,
   insertUser,
   updateUserById,
   deleteUserById,
@@ -16,8 +16,8 @@ const findAllUsers = async () => {
   return data;
 };
 
-const findById = async (id) => {
-  const [result] = await userById(id);
+const findUserById = async (id) => {
+  const [result] = await selectUserById(id);
 
   if (!result) {
     return false;
@@ -40,7 +40,7 @@ const createUser = async (user) => {
 };
 
 const updateUser = async (id, user) => {
-  const findUser = await findById(id);
+  const findUser = await findUserById(id);
 
   if (findUser) {
     const result = await updateUserById(id, user);
@@ -51,7 +51,7 @@ const updateUser = async (id, user) => {
 };
 
 const deleteUser = async (id) => {
-  const findUser = await findById(id);
+  const findUser = await findUserById(id);
 
   if (findUser) {
     const result = await deleteUserById(id);
@@ -69,7 +69,7 @@ const postEmail = async (user_email) => {
 
 module.exports = {
   findAllUsers,
-  findById,
+  findUserById,
   createUser,
   updateUser,
   deleteUser,
