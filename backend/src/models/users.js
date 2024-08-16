@@ -20,7 +20,7 @@ const insertUser = async (user) => {
     "INSERT INTO users (user_name, user_email, user_password, user_date, user_phone) VALUES (?, ?, ?, ?, ?)",
     [user_name, user_email, user_password, user_date, user_phone]
   );
-  // console.log(result);
+
   return result;
 };
 
