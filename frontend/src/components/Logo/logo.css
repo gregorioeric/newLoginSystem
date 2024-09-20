@@ -1,0 +1,12 @@
+.img-logo {
+  width: 135px;
+}
+
+.img-logo a {
+  display: flex;
+}
+
+.img-logo a img {
+  width: 135px;
+  max-width: none;
+}

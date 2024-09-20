@@ -1,24 +1,27 @@
-import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "boxicons";
+import Layout from "./components/Layout/Layout";
+import Pizzas from "./pages/pizzas/Pizzas";
+import Contact from "./pages/contact/Contact";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Venda from "./pages/venda/Venda";
 
 function App() {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    const getUsers = async () => {
-      const req = await fetch("http://localhost:3000/users");
-      const res = await req.json();
-      setData(res);
-    };
-    getUsers();
-  }, []);
-
-  if (!data) {
-    return <h2>aguarde...</h2>;
-  }
-
   return (
     <>
-      <div>{data.results[0].nome_user}</div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/pizzas" element={<Pizzas />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/pedido" element={<Venda />} />
+        </Route>
+      </Routes>
     </>
   );
 }

@@ -1,0 +1,58 @@
+:root {
+  --color-green: rgb(2, 115, 42);
+  --color-black: rgb(13, 13, 13);
+  --color-red: rgb(217, 26, 42);
+  --color-yellow: rgb(254, 169, 0);
+  --color-orange: rgb(242, 135, 5);
+  --color-white: rgb(255, 255, 255);
+  --color-transparent: rgba(255, 255, 255, 0);
+}
+
+.nav-login-register ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-login-register ul li .cart {
+  /* background: var(--color-white); */
+  padding: 0 0.5rem;
+}
+
+.nav-login-register ul li a {
+  display: flex;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-login-register ul li a i {
+  color: var(--color-orange);
+  font-size: 3rem;
+}
+
+.nav-login-register ul li .login {
+  border: 3px solid var(--color-yellow);
+  border-radius: 0.6rem;
+  color: rgb(255, 255, 255);
+}
+
+.nav-login-register ul li .register {
+  border: 3px solid var(--color-transparent);
+  background: var(--color-green);
+  border-radius: 0.6rem;
+  color: rgb(255, 255, 255);
+}
+
+.nav-login-register ul li .login:hover {
+  background: rgb(242, 159, 5);
+  color: rgb(0, 0, 0);
+}
+
+.nav-login-register ul li .register:hover {
+  border: 3px solid var(--color-green);
+  background: none;
+  color: rgb(255, 255, 255);
+}

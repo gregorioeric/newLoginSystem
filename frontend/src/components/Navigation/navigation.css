@@ -1,0 +1,44 @@
+:root {
+  --color-green: rgb(2, 115, 42);
+  --color-black: rgb(13, 13, 13);
+  --color-red: rgb(217, 26, 42);
+  --color-yellow: rgb(254, 169, 0);
+  --color-orange: rgb(242, 135, 5);
+}
+
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-menu ul li a {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  padding: 0.6rem 2.5rem;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-menu ul li a:hover {
+  color: rgb(130, 130, 130);
+}
+
+.nav-menu ul li a::before {
+  content: "";
+  position: absolute;
+  background: var(--color-orange);
+  width: 100%;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  transition: height 300ms ease-in-out;
+  z-index: -5;
+}
+
+.nav-menu ul li a:hover::before {
+  height: 10%;
+}

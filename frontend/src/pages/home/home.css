@@ -1,0 +1,68 @@
+/* .img-product {
+  width: 33.33%;
+} */
+
+.home {
+  background-image: url("/images/fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .container-home {
+  background: rgba(255, 255, 255, 0.3);
+} */
+
+.nav-product {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.nav-product a {
+  display: flex;
+  cursor: pointer;
+  padding: 1rem 4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  transition: all 300ms ease-in-out;
+}
+
+.nav-product a:hover {
+  transform: scale(1.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.section-product {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.content-product {
+  width: calc(25% - 1rem);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+.btn-addCart {
+  padding: 0.5rem 0;
+}
+
+.btn-addCart button {
+  width: 100%;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgb(84, 154, 75);
+  cursor: pointer;
+}

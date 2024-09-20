@@ -28,8 +28,7 @@ const postVenda = async (req, res) => {
     });
   } else {
     return res.json({
-      message:
-        "Pedido não realizado. Certifique-se se seus dados estão corretos!",
+      message: "Pedido não realizado. Verificar se seus dados estão corretos!",
     });
   }
 };

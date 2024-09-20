@@ -12,9 +12,11 @@ const route = express.Router();
 
 route.get("/", getAllProdutos);
 
-route.get("/pesquisaPorId/:id", getProdutoById);
+// route.get("/pesquisaPorId/:id", getProdutoById);
+route.get("/:id", getProdutoById);
 
-route.get("/pesquisa", getProdutoByName);
+// route.get("/pesquisa", getProdutoByName);
+route.get("/nome/:nome", getProdutoByName);
 
 route.post("/", postProduto);
 

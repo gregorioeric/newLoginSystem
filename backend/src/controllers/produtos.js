@@ -22,13 +22,14 @@ const getProdutoById = async (req, res) => {
 };
 
 const getProdutoByName = async (req, res) => {
-  const produto_name = req.query.name;
+  const { nome } = req.params;
+  console.log(nome);
 
-  const result = await findProdutoByName(produto_name);
+  const result = await findProdutoByName(nome);
 
   if (result.length === 0) {
     return res.json({
-      message: `Não encontramos nenhum produto com o nome ${produto_name}!`,
+      message: `Não encontramos nenhum produto com o nome ${nome}!`,
     });
   }
 
